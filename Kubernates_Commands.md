@@ -26,4 +26,17 @@
 
   kubectl create deployment Name —image=image [—dry-run] [options]
 
+  kubectl create deployment ngnix-depl --image=nginx
+  kubectl get deployment
+  kubectl get pods
+
+  kubectl logs pod-name
+
+  kubectl describe pod pod-name
+
+  kubectl delete deployment deploy-name
+
+  kubectl get replicaset
+
+  kubectl apply -f config_file.yaml
 
