@@ -40,3 +40,25 @@
 
   kubectl apply -f config_file.yaml
 
+  ### Docker
+  ---------------
+  FROM openjdk:8-jdk-alpine
+  COPY target/Docker_Spring_Boot-0.0.1-SNAPSHOT.jar docker_spring_boot_message.jar
+  ENTRYPOINT ["java","-jar","/docker_spring_boot_message.jar"]
+  -----------------
+
+  docker build --tag=docker_spring_boot_message:latest .
+
+  docker run -p8887:8888 docker_spring_boot_message:latest
+
+
+  for kube
+
+  start minikube
+
+  eval $(minikube docker-env)       
+
+  docker build -t spring-boot-test .
+
+  kubectl create deployment springboot-kubernetes --image=springboot-kubernetes:1.0 --port=8080
+  
