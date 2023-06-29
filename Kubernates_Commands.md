@@ -61,4 +61,11 @@
   docker build -t spring-boot-test .
 
   kubectl create deployment springboot-kubernetes --image=springboot-kubernetes:1.0 --port=8080
-  
+
+
+
+
+
+
+
+  some references from https://www.kindsonthegenius.com/setup-kubernetes-locally-deploy-springboot-application-step-by-step-tutorial/
